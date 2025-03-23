@@ -1,0 +1,8 @@
+--Listar esquemas, nombre, tipo de objeto 
+SELECT TABLE_SCHEMA AS SchemaName, TABLE_NAME AS ObjectName, 'TABLE' AS ObjectType
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = 'BASE TABLE'
+UNION ALL
+SELECT TABLE_SCHEMA AS SchemaName, TABLE_NAME AS ObjectName, 'VIEW' AS ObjectType
+FROM INFORMATION_SCHEMA.VIEWS
+ORDER BY SchemaName, ObjectType, ObjectName;
