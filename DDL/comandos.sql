@@ -1,0 +1,7 @@
+/*
+DDL - DATA DEFINITION LANGUAGE
+*/
+
+-- CREATE
+-- ALTER
+-- DROP
